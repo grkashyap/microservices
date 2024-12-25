@@ -1,14 +1,17 @@
 package com.moviedb.genre.db;
 
+import com.moviedb.genre.entity.Genre;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.ListCrudRepository;
+
 import java.util.List;
 
-import org.springframework.data.repository.CrudRepository;
+public interface GenreRepository extends ListCrudRepository<Genre, Long> {
 
-import com.moviedb.genre.entity.Genre;
-
-public interface GenreRepository extends CrudRepository<Genre, Long> {
-
-    List<Genre> findMoviesByGenre(String genre);
+    List<Genre> findMoviesByGenre(String strGenre);
 
     Genre findGenreByMovieId(long movieId);
+
+    @Query("SELECT DISTINCT(genre) FROM Genre")
+    List<String> getAllGenres();
 }

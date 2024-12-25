@@ -8,10 +8,10 @@ import jakarta.persistence.Id;
 public class Genre {
 
     @Id
-    @Column(name="Movie_id")
+    @Column(name = "Movie_id")
     private long movieId;
 
-    @Column(name="genre")
+    @Column(name = "genre")
     private String genre;
 
     public long getMovieId() {
@@ -20,7 +20,7 @@ public class Genre {
     public void setMovieId(long movieId) {
         this.movieId = movieId;
     }
-    
+
     public String getGenre() {
         return genre;
     }
@@ -28,15 +28,20 @@ public class Genre {
         this.genre = genre;
     }
 
-    @Override
-    public String toString() {
-        return "Genre [MovieId=" + this.movieId + ", Genre=" + this.genre + "]";
-    }
-
     public Genre(long movieId, String genre) {
         this.movieId = movieId;
         this.genre = genre;
     }
 
-    protected Genre() { }
+    protected Genre() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Genre{" +
+                "movieId=" + movieId +
+                ", genre='" + genre + '\'' +
+                '}';
+    }
 }
