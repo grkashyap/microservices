@@ -12,7 +12,7 @@
 	<artifactId>genre</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>genre</name>
-	<description>Movide DB Genre Service</description>
+	<description>Movie DB Genre Service</description>
 	<url/>
 	<licenses>
 		<license/>
