@@ -21,7 +21,7 @@ public class Movie {
     @Column(name = "Rating")
     private double rating;
 
-    @Column(name = "TotalVotes")
+    @Column(name = "totalvotes")
     private long totalVotes;
 
     @Column(name = "Budget")
