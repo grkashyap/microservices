@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: genre
+spec:
+    replicas: 1
+    selector: 
+        matchLabels:
+            app: genre
+    template:
+        metadata:
+            labels:
+                app: genre
+        spec:
+            containers:
+            - name: genre
+              image: localhost:5000/genre
+              ports:
+              - containerPort: 7001
